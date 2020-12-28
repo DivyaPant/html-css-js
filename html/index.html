@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>Project-1</title>
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel='icon' href='../images/favicon.png' type='image/x-icon'>
+
+</head>
+
+<body>
+	<header class="header-main">
+		<div class="max-width">
+
+			<span class="menu" onclick="burgerMenu()">
+				<img src="../images/menu-icon.png" alt="BeroeLive">
+			</span>
+			<span class="logo">
+				<img src="../images/beroe-live-logo.png" alt="BeroeLive">
+			</span>
+
+			<span class="searchbar">
+				<input class="search-type" type="text" placeholder="Search">
+				<button class="search"> <img src="../images/search-purple.png" alt="Search"></button>
+				<button class="search-mobileview"> <img src="../images/search-white.png" alt="Search"></button>
+
+			</span>
+
+			<span class="bell-icon">
+				<img src="../images/notification-icon(1).png" alt="notification"></span>
+			<div class="vertical-line">
+
+			</div>
+			<span class="ask-beroe">
+				<span class="hiJohn">
+					<img src="../images/search-bar-icon.png" alt="ask" onclick="signOutJohn()">
+					<p class="header-content">Hi John!</p>
+				</span>
+				<span class="signIn">
+					<p>Sign In</p>
+				</span>
+				<span class="signOut close-dropdown">
+					<p>Account</p>
+					<hr>
+					<p class="signout-btn">Sign Out</p>
+				</span>
+			</span>
+			<div class="vertical-line">
+
+			</div>
+			<span class="ask-beroe" onclick="showModal()">
+				<img src="../images/ask-beroe.png" alt="ask">
+				<p class="header-content">Ask Beroe</p>
+
+			</span>
+			<div class="vertical-line">
+
+			</div>
+
+			<div class="leftSlideMenu closeSlider">
+				<button class="closeSlider-btn">&times</button>
+				<div class="category-nav">
+					<img src="../images/beroe-live-logo.png">					
+					<hr>
+					<p>Dashboard</p>
+
+					<p>Discussions</p>
+
+					<p>Interesting Reads</p>
+
+					<p>Customized Reports</p>
+					<hr>
+					<p class="border">Sign Out</p>
+					<p class= "help border" onclick="showModal()">Ask Beroe</p>
+
+				</div>
+			</div>
+
+
+			<div class="modal">
+				<div class="modal-content">
+					<span class="close-button" onclick="closeModal()">&times;</span>
+					<div class="query-modal">
+						<h3>Ask Beroe</h3>
+						<p>Get quick answers to queries pertaining to general information or the content on the
+							platform.</p>
+						<h4>Select your category</h4>
+						<article class="radio">
+							<section class="radio-btn">
+								<label>
+									<input type="radio" name="radio-button" value="css" checked />
+									<span>General Query</span>
+								</label>
+								<label>
+									<input type="radio" name="radio-button" value="no" />
+									<span>Market intelligence query</span>
+								</label>
+							</section>
+						</article>
+						<textarea class="query-textarea" rows="12" cols="50"
+							placeholder="Ask us queries about your membership, how to reset your password etc."></textarea>
+						<small class="verify-queryData"></small>
+						<input type="button" value="Submit" class="query-submit" onclick="submitted()">
+
+					</div>
+				</div>
+			</div>
+			<div class="query-submitted-modal">
+				<div class="query-info">
+					<p>Your query has been successfully submitted<br><br>We will return to you soon!<br><br></p>
+					<input type="button" class="successful query-submit" value="Okay" onclick="okay()">
+				</div>
+			</div>
+
+
+		</div>
+	</header>
+	<nav>
+		<section class="navigation">
+			<div class="max-width-nav">
+				<section class="left">
+					<input id="tab1" type="radio" name="tabs">
+					<label for="tab1">Dashboard</label>
+
+					<input id="tab2" type="radio" name="tabs">
+					<label for="tab2">Discussions</label>
+
+					<input id="tab3" type="radio" name="tabs">
+					<label for="tab3">Interesting Reads</label>
+
+				</section>
+				<section class="right">
+					<input id="tab4" type="radio" name="tabs">
+					<label for="tab4">Customized Reports</label>
+				</section>
+		</section>
+		</div>
+		</section>
+
+	</nav>
+
+	<main>
+
+		<article class="interesting-reads">
+			<div class="max-width-main">
+				<div class="head">
+					<section class="line">
+						<p>INTERESTING READS</p>
+						<hr>
+					</section>
+					<h2>Commercial & Reminder Items, Technology, Category 2 <sub class="caret"><img
+								src="../images/caret-circle-white.png" alt="more">
+							<span class="dropdown-menu">
+								<p onclick="dropdownCaret()">Dropdown</p>
+								<hr>
+								<p onclick="dropdownCaret()">Dropdown</p>
+								<hr>
+								<p onclick="dropdownCaret()">Dropdown</p>
+								<hr>
+								<p onclick="dropdownCaret()">Dropdown</p>
+								<hr>
+								<p onclick="dropdownCaret()">Dropdown</p>
+							</span></sub>
+					</h2>
+
+					<p class="five">+ 5 more</p>
+				</div>
+
+				<section class="figs">
+					<section class="fig-left">
+						<div class="box">
+
+							<p>BLOG</p>
+							<div class="text">
+								<h5 style="color: #b5d400;">MARKETING MATERIALS</h5>
+								<h4 style="color: #464646;">La Nina to have a positive impact on key Indian crop.</h4>
+								<pre>Sunil Shah | 2 August 2016</pre>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt
+									velit sit amet tortor ullamcorper venenatis. Pellentesque congue dapibus
+									elem…
+
+
+								</p>
+
+								<footer>
+									<pre>&#9734 5  |  15 K</pre>
+								</footer>
+
+
+							</div>
+						</div>
+					</section>
+					<section class="fig-right">
+						<div class="box">
+
+							<p>WHITEPAPERS</p>
+							<div class="text">
+								<h5 style="color: #b5d400;">MARKETING MATERIALS</h5>
+								<h4 style="color: #464646;">La Nina to have a positive impact on key Indian crop.</h4>
+								<pre>Sunil Shah | 2 August 2016</pre>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt
+									velit sit amet tortor ullamcorper venenatis. Pellentesque congue dapibus
+									elem…
+								</p>
+
+								<footer>
+									<pre>&#9734 5  |  15 K</pre>
+								</footer>
+
+
+							</div>
+						</div>
+					</section>
+				</section>
+			</div>
+		</article>
+		<article class="banner">
+			<div class="max-width-main">
+
+				<section class="overlay-article">
+					<div class="article-view">
+						<h6 class="close">&times;</h6>
+						<h4 style="color: #464646;">La Nina to have a positive impact on key Indian crop</h4>
+						<article class="article-content">
+
+
+							<img src="../images/building.jpg">
+
+							<pre>Sunil Shah | 2 August 2016 | 5 | 15 K</pre>
+							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+								A quaerat aliquam libero, explicabo cum repellendus incidunt quidem
+								aspernatur A quaerat aliquam libero, explicabo cum repellendus incidunt quidem
+								aspernatur labore odio accusantium maxime nihil sint fuga praesentium
+								repellat commoluptatem placeatLorem ipsum dolor sit, amet consectetur adipisicing
+								elit.
+								A quaerat aliquam libero, explicabo cum repellendus incidunt quidem
+								aspernatur A quaerat aliquam libero, explicabo cum repellendus incidunt quidem
+								aspernatur labore odio accusantium maxime nihil sint fuga praesentium
+								repellat commoluptatem placeatLorem ipsum dolor sit, amet consectetur adipisicing
+								elit.
+								A quaerat aliquam libero, explicabo cum repellendus incidunt quidem
+								aspernatur A quaerat aliquam libero, explicabo cum repellendus incidunt quidem
+								aspernatur labore odio accusantium maxime nihil sint fuga praesentium
+								repellat commoluptatem placeatLorem ipsum dolor sit, amet consectetur adipisicing
+								elit.
+								A quaerat aliquam libero, explicabo cum repellendus incidunt quidem
+								aspernatur A quaerat aliquam libero, explicabo cum repellendus incidunt quidem
+								aspernatur labore odio accusantium maxime nihil sint fuga praesentium
+								repellat commoluptatem placeatLorem ipsum dolor sit, amet consectetur adipisicing
+								elit.
+								A quaerat aliodio accusantium maxime nihil sint fuga praesentium
+								repellat commodi voluptatem placeatLorem ipsum dolor sit, amet consectetur
+								adipisicing elit.
+								A quaerat aliquam libero, explicabo cum repellendus incidunt quidem
+								aspe</p>
+
+
+						</article>
+					</div>
+				</section>
+				<aside class="aside">
+					<div class="sponsored">
+						<p>Sponsored Content</p>
+					</div>
+					<div class="side">
+						<img src="../images/building.jpg" alt="building">
+						<h6>BLOG</h6>
+						<h5>La Nina to have a positive impact on key Indian crop.</h5>
+						<p>Sunil Shah | 2 August 2016 | 5 | 15 K</p>
+
+					</div>
+					<div class="side">
+						<img src="../images/building.jpg" alt="building">
+						<h6>BLOG</h6>
+						<h5>La Nina to have a positive impact on key Indian crop.</h5>
+						<p>Sunil Shah | 2 August 2016 | 5 | 15 K</p>
+
+					</div>
+					<div class="side">
+						<img src="../images/building.jpg" alt="building">
+						<h6>BLOG</h6>
+						<h5>La Nina to have a positive impact on key Indian crop.</h5>
+						<p>Sunil Shah | 2 August 2016 | 5 | 15 K</p>
+
+					</div>
+					<div class="side">
+						<img src="../images/building.jpg" alt="building">
+						<h6>BLOG</h6>
+						<h5>La Nina to have a positive impact on key Indian crop.</h5>
+						<p>Sunil Shah | 2 August 2016 | 5 | 15 K</p>
+
+					</div>
+					<div class="side">
+						<img src="../images/building.jpg" alt="building">
+						<h6>BLOG</h6>
+						<h5>La Nina to have a positive impact on key Indian crop.</h5>
+						<p>Sunil Shah | 2 August 2016 | 5 | 15 K</p>
+
+					</div>
+					<div class="side">
+						<img src="../images/building.jpg" alt="building">
+						<h6>BLOG</h6>
+						<h5>La Nina to have a positive impact on key Indian crop.</h5>
+						<p>Sunil Shah | 2 August 2016 | 5 | 15 K</p>
+
+					</div>
+					<div class="side">
+						<img src="../images/building.jpg" alt="building">
+						<h6>BLOG</h6>
+						<h5>La Nina to have a positive impact on key Indian crop.</h5>
+						<p>Sunil Shah | 2 August 2016 | 5 | 15 K</p>
+
+					</div>
+					<div class="side">
+						<img src="../images/building.jpg" alt="building">
+						<h6>BLOG</h6>
+						<h5>La Nina to have a positive impact on key Indian crop.</h5>
+						<p>Sunil Shah | 2 August 2016 | 5 | 15 K</p>
+
+					</div>
+				</aside>
+				<div class="banner-left">
+
+					<section class="blog">
+						<section class="line">
+							<p>BLOG</p>
+							<hr>
+						</section>
+						<section class="blog-lower">
+							<div class="upper-banner">
+								<div class="blog-images upper-image">
+									<img src="../images/building.jpg" alt="building" onclick="readArticle()">
+								</div>
+								<div class="blog-images text1">
+									<h4 style="color: #464646;" onclick="readArticle()">La Nina to have a positive
+										impact on
+										key Indian crop.</h4>
+									<pre>Sunil Shah | 2 August 2016 | 5 | 15 K</pre>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non
+										condimentum
+										augue,
+										ut lobortis lorem. Donec eu sapien molestie, vehicula lectus a, gravida justo.
+										Praesent
+										volutpat diam a arcu vulputate maximus. Fusce volutpat nunc velit, volutpat
+										viverra
+										lectus
+										condimentum vitae. Vivamus varius eu metus in mollis. Integer ullamcorper
+										dapibus
+										malesuada.
+										Duis at tellus rhoncus, malesuada magna quis, volutpat dui. <br>
+										Donec eu sapien molestie, vehicula lectus a, gravida justo. Praesent volutpat
+										diam a
+										arcu
+										vulputate maximus. Ut dapibus nunc augue, non bibendum libero eleifend a.
+										Vestibulum
+										sodales
+										non ex nec venenatis.
+									</p>
+								</div>
+							</div>
+							<div class="lower-images">
+								<figure class="blog-images">
+									<img src="../images/building.jpg" alt="building" onclick="readArticle()">
+									<figcaption>
+										<h3 onclick="readArticle()">La Nina to have a positive impact on key Indian
+											crop.</h3>
+										<p>Sunil Shah | 2 August 2016 | &#9734 5 | 15 K</p>
+									</figcaption>
+								</figure>
+								<figure class="blog-images">
+									<img src="../images/building.jpg" alt="building" onclick="readArticle()">
+									<figcaption>
+										<h3 onclick="readArticle()">La Nina to have a positive impact on key Indian
+											crop.</h3>
+										<p>Sunil Shah | 2 August 2016 | &#9734 5 | 15 K</p>
+									</figcaption>
+								</figure>
+								<figure class="blog-images">
+									<img src="../images/building.jpg" alt="building" onclick="readArticle()">
+									<figcaption>
+										<h3 onclick="readArticle()">La Nina to have a positive impact on key Indian
+											crop.</h3>
+										<p>Sunil Shah | 2 August 2016 | &#9734 5 | 15 K</p>
+									</figcaption>
+								</figure>
+								<figure class="blog-images">
+									<img src="../images/building.jpg" alt="building" onclick="readArticle()">
+									<figcaption>
+										<h3 onclick="readArticle()">La Nina to have a positive impact on key Indian
+											crop.</h3>
+										<p>Sunil Shah | 2 August 2016 | &#9734 5 | 15 K</p>
+									</figcaption>
+								</figure>
+
+								<figure class="blog-images extra1">
+									<img src="../images/building.jpg" alt="building" onclick="readArticle()">
+									<figcaption>
+										<h3 onclick="readArticle()">La Nina to have a positive impact on key Indian
+											crop.</h3>
+										<p>Sunil Shah | 2 August 2016 | &#9734 5 | 15 K</p>
+									</figcaption>
+								</figure>
+								<figure class="blog-images extra2">
+									<img src="../images/building.jpg" alt="building" onclick="readArticle()">
+									<figcaption>
+										<h3 onclick="readArticle()">La Nina to have a positive impact on key Indian
+											crop.</h3>
+										<p>Sunil Shah | 2 August 2016 | &#9734 5 | 15 K</p>
+									</figcaption>
+								</figure>
+
+							</div>
+						</section>
+						<footer class="more" onclick="extraBlogs(1)">
+							<u>More
+
+							</u>
+							<img src="../images/chevron.png" alt="">
+						</footer>
+					</section>
+					<section class="blog">
+						<section class="line">
+							<p>ARTICLES</p>
+							<hr>
+						</section>
+						<section class="blog-lower">
+							<div class="upper-banner">
+								<div class="blog-images upper-image">
+									<img src="../images/building.jpg" alt="building" onclick="readArticle()">
+								</div>
+								<div class="blog-images text1">
+									<h4 style="color: #464646;" onclick="readArticle()">La Nina to have a positive
+										impact on
+										key Indian crop.</h4>
+									<pre>Sunil Shah | 2 August 2016 | 5 | 15 K</pre>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non
+										condimentum
+										augue,
+										ut lobortis lorem. Donec eu sapien molestie, vehicula lectus a, gravida justo.
+										Praesent
+										volutpat diam a arcu vulputate maximus. Fusce volutpat nunc velit, volutpat
+										viverra
+										lectus
+										condimentum vitae. Vivamus varius eu metus in mollis. Integer ullamcorper
+										dapibus
+										malesuada.
+										Duis at tellus rhoncus, malesuada magna quis, volutpat dui. <br>
+										Donec eu sapien molestie, vehicula lectus a, gravida justo. Praesent volutpat
+										diam a
+										arcu
+										vulputate maximus. Ut dapibus nunc augue, non bibendum libero eleifend a.
+										Vestibulum
+										sodales
+										non ex nec venenatis.
+
+									</p>
+								</div>
+							</div>
+							<div class="lower-images">
+								<figure class="blog-images">
+									<img src="../images/building.jpg" alt="building" onclick="readArticle()">
+									<figcaption>
+										<h3 onclick="readArticle()">La Nina to have a positive impact on key Indian
+											crop.</h3>
+										<p>Sunil Shah | 2 August 2016 | &#9734 5 | 15 K</p>
+									</figcaption>
+								</figure>
+								<figure class="blog-images">
+									<img src="../images/building.jpg" alt="building" onclick="readArticle()">
+									<figcaption>
+										<h3 onclick="readArticle()">La Nina to have a positive impact on key Indian
+											crop.</h3>
+										<p>Sunil Shah | 2 August 2016 | &#9734 5 | 15 K</p>
+									</figcaption>
+								</figure>
+								<figure class="blog-images">
+									<img src="../images/building.jpg" alt="building" onclick="readArticle()">
+									<figcaption>
+										<h3 onclick="readArticle()">La Nina to have a positive impact on key Indian
+											crop.</h3>
+										<p>Sunil Shah | 2 August 2016 | &#9734 5 | 15 K</p>
+									</figcaption>
+								</figure>
+								<figure class="blog-images">
+									<img src="../images/building.jpg" alt="building" onclick="readArticle()">
+									<figcaption>
+										<h3 onclick="readArticle()">La Nina to have a positive impact on key Indian
+											crop.</h3>
+										<p>Sunil Shah | 2 August 2016 | &#9734 5 | 15 K</p>
+									</figcaption>
+								</figure>
+
+								<figure class="blog-images extra1">
+									<img src="../images/building.jpg" alt="building" onclick="readArticle()">
+									<figcaption>
+										<h3 onclick="readArticle()">La Nina to have a positive impact on key Indian
+											crop.</h3>
+										<p>Sunil Shah | 2 August 2016 | &#9734 5 | 15 K</p>
+									</figcaption>
+								</figure>
+								<br>
+								<figure class="blog-images extra2">
+									<img src="../images/building.jpg" alt="building" onclick="readArticle()">
+									<figcaption>
+										<h3 onclick="readArticle()">La Nina to have a positive impact on key Indian
+											crop.</h3>
+										<p>Sunil Shah | 2 August 2016 | &#9734 5 | 15 K</p>
+									</figcaption>
+								</figure>
+							</div>
+						</section>
+						<footer class="more" onclick="extraBlogs(2)">
+							<u>More
+
+							</u>
+							<img src="../images/chevron.png" alt="">
+						</footer>
+					</section>
+					<section class="blog">
+						<section class="line">
+							<p>WHITEPAPERS</p>
+							<hr>
+						</section>
+
+						<section class="blog-lower">
+							<div class="upper-banner">
+								<div class="blog-images upper-image">
+									<img src="../images/building.jpg" alt="building" onclick="readArticle()">
+								</div>
+								<div class="blog-images text1">
+									<h4 style="color: #464646;" onclick="readArticle()">La Nina to have a positive
+										impact on
+										key Indian crop.</h4>
+									<pre>Sunil Shah | 2 August 2016 | 5 | 15 K</pre>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non
+										condimentum
+										augue,
+										ut lobortis lorem. Donec eu sapien molestie, vehicula lectus a, gravida justo.
+										Praesent
+										volutpat diam a arcu vulputate maximus. Fusce volutpat nunc velit, volutpat
+										viverra
+										lectus
+										condimentum vitae. Vivamus varius eu metus in mollis. Integer ullamcorper
+										dapibus
+										malesuada.
+										Duis at tellus rhoncus, malesuada magna quis, volutpat dui. <br>
+										Donec eu sapien molestie, vehicula lectus a, gravida justo. Praesent volutpat
+										diam a
+										arcu
+										vulputate maximus. Ut dapibus nunc augue, non bibendum libero eleifend a.
+										Vestibulum
+										sodales
+										non ex nec venenatis.
+
+									</p>
+								</div>
+							</div>
+							<div class="lower-images">
+								<figure class="blog-images">
+									<img src="../images/building.jpg" alt="building" onclick="readArticle()">
+									<figcaption>
+										<h3 onclick="readArticle()">La Nina to have a positive impact on key Indian
+											crop.</h3>
+										<p>Sunil Shah | 2 August 2016 | &#9734 5 | 15 K</p>
+									</figcaption>
+								</figure>
+								<figure class="blog-images">
+									<img src="../images/building.jpg" alt="building" onclick="readArticle()">
+									<figcaption>
+										<h3 onclick="readArticle()">La Nina to have a positive impact on key Indian
+											crop.</h3>
+										<p>Sunil Shah | 2 August 2016 | &#9734 5 | 15 K</p>
+									</figcaption>
+								</figure>
+								<figure class="blog-images">
+									<img src="../images/building.jpg" alt="building" onclick="readArticle()">
+									<figcaption>
+										<h3 onclick="readArticle()">La Nina to have a positive impact on key Indian
+											crop.</h3>
+										<p>Sunil Shah | 2 August 2016 | &#9734 5 | 15 K</p>
+									</figcaption>
+								</figure>
+								<figure class="blog-images">
+									<img src="../images/building.jpg" alt="building" onclick="readArticle()">
+									<figcaption>
+										<h3 onclick="readArticle()">La Nina to have a positive impact on key Indian
+											crop.</h3>
+										<p>Sunil Shah | 2 August 2016 | &#9734 5 | 15 K</p>
+									</figcaption>
+								</figure>
+
+								<figure class="blog-images extra1">
+									<img src="../images/building.jpg" alt="building" onclick="readArticle()">
+									<figcaption>
+										<h3 onclick="readArticle()">La Nina to have a positive impact on key Indian
+											crop.</h3>
+										<p>Sunil Shah | 2 August 2016 | &#9734 5 | 15 K</p>
+									</figcaption>
+								</figure>
+								<br>
+								<figure class="blog-images extra2">
+									<img src="../images/building.jpg" alt="building" onclick="readArticle()">
+									<figcaption>
+										<h3 onclick="readArticle()">La Nina to have a positive impact on key Indian
+											crop.</h3>
+										<p>Sunil Shah | 2 August 2016 | &#9734 5 | 15 K</p>
+									</figcaption>
+								</figure>
+							</div>
+						</section>
+						<footer class="more" onclick="extraBlogs(3)">
+							<u>More
+
+							</u>
+							<img src="../images/chevron.png" alt="">
+						</footer>
+					</section>
+				</div>
+			</div>
+		</article>
+
+	</main>
+	<footer class="footer">
+
+	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+	<script src="../js/index.js"></script>
+</body>
+
+</html>
